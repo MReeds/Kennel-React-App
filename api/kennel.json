@@ -1,0 +1,77 @@
+{
+    "animals": [
+        {
+            "id": 1,
+            "name": "Doodles",
+            "breed": "Poodle"
+        },
+        {
+            "id": 2,
+            "name": "Lucy",
+            "breed": "German Shepard"
+        },
+        {
+            "id": 3,
+            "name": "Esme",
+            "breed": "Pitbull"
+        }
+    ],
+    "employees": [
+        {
+            "id": 1,
+            "firstName": "George",
+            "lastName": "Smith",
+            "department": "Marketing"
+        },
+        {
+            "id": 2,
+            "firstName": "Des",
+            "lastName": "Anderson",
+            "department": "Sales"
+        },
+        {
+            "id": 3,
+            "firstName": "Kelly",
+            "lastName": "Jenkins",
+            "department": "Medical"
+        }
+    ],
+    "locations": [
+        {
+            "id": 1,
+            "address": "124 Westwood Drive",
+            "city": "Portland",
+            "state": "Tennessee"
+        },
+        {
+            "id": 2,
+            "address": "768 Fairbanks Road",
+            "city": "Albaneer",
+            "state": "Maine"
+        },
+        {
+            "id": 3,
+            "address": "3004 Grayland Avenue",
+            "city": "Cabool",
+            "state": "Missouri"
+        }
+    ],
+    "owners": [
+        {
+            "id": 1,
+            "name": "Greg Jones",
+            "phoneNumber": "615-776-5555"
+            
+        },
+        {
+            "id": 2,
+            "name": "Alexander Woods",
+            "phoneNumber": "615-456-5555"
+        },
+        {
+            "id": 3,
+            "name": "Elizabeth Cook",
+            "phoneNumber": "615-998-5555"
+        }
+    ]
+}
