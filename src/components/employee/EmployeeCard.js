@@ -1,5 +1,6 @@
 import React from "react";
-import "../animal/Animal.css"
+import { Link } from "react-router-dom";
+import "../animal/Animal.css";
 
 const EmployeeCard = props => {
     return (
@@ -7,6 +8,9 @@ const EmployeeCard = props => {
     <div className="card-content">
         <h2>Name: {props.employee.firstName} {props.employee.lastName}</h2>
 <h2>Department: {props.employee.department}</h2>
+<Link to={`/employee/${props.employee.id}`}>
+    <button>Details</button>
+</Link>
 <button type="button" onClick={() => props.deleteEmployee(props.employee.id)}>Discharge</button>
 
         </div>
