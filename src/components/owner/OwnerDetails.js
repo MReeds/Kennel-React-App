@@ -4,10 +4,10 @@ import "./OwnerDetails.css";
 
 const OwnerDetail = props => {
   const [owner, setOwner] = useState({ name: "", contact: "" });
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleDelete = () => {
-      setIsLoading(true);
+      setIsLoading(false);
       OwnerManager.delete(props.ownerId).then(() =>
       props.history.push("/owner")
       );
@@ -19,7 +19,7 @@ const OwnerDetail = props => {
         name: owner.name,
         phoneNumber: owner.phoneNumber
       });
-      setIsLoading(false);
+      setIsLoading(true);
     });
   }, [props.ownerId]);
 
