@@ -25,7 +25,8 @@ const ApplicationViews = () => {
         }} />
         <Route path="/animals/:animalId(\d+)" render={(props) => {
           // Pass the animalId to the AnimalDetailComponent
-          return <AnimalDetail animalId={parseInt(props.match.params.animalId)}/>
+          return <AnimalDetail animalId={parseInt(props.match.params.animalId)}
+          {...props}/>
         }} />
       <Route
       exact path="/location"
@@ -35,21 +36,24 @@ const ApplicationViews = () => {
       />
       <Route path="/location/:locationId(\d+)" render={(props) => {
           // Pass the animalId to the AnimalDetailComponent
-          return <LocationDetail locationId={parseInt(props.match.params.locationId)}/>
+          return <LocationDetail locationId={parseInt(props.match.params.locationId)}
+          {...props}/>
       }}/>
       <Route exact path="/employee" render={(props) => {
           return <EmployeeList />
         }} />
         <Route path="/employee/:employeeId(\d+)" render={(props) => {
           // Pass the animalId to the AnimalDetailComponent
-          return <EmployeeDetail employeeId={parseInt(props.match.params.employeeId)}/>
+          return <EmployeeDetail employeeId={parseInt(props.match.params.employeeId)}
+          {...props}/>
         }} />
       <Route exact path="/owner" render={(props) => {
           return <OwnerList />
         }} />
         <Route path="/owner/:ownerId(\d+)" render={(props) => {
           // Pass the animalId to the AnimalDetailComponent
-          return <OwnerDetail ownerId={parseInt(props.match.params.ownerId)}/>
+          return <OwnerDetail ownerId={parseInt(props.match.params.ownerId)}
+          {...props}/>
         }} />
     </React.Fragment>
   );

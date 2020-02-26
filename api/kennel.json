@@ -72,25 +72,5 @@
       "name": "Elizabeth Cook",
       "phoneNumber": "615-998-5555"
     }
-  ],
-    "clients": [
-      {
-        "id": 1,
-        "name": "Bob Philips",
-        "address": "776 Westwood drive",
-        "contact": "772-990-5000"
-      },
-      {
-        "id": 2,
-        "name": "Crystal Simmons",
-        "address": "1 Williamswood Road",
-        "contact": "456-789-5000"
-      },
-      {
-        "id": 3,
-        "name": "Beckie Loveland",
-        "address": "123 Redwood Fair",
-        "contact": "342-453-5899"
-      }
   ]
 }
