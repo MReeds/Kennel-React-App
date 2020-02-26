@@ -3,26 +3,41 @@ import OwnerManager from "../../modules/OwnerManager";
 import "./OwnerDetails.css";
 
 const OwnerDetail = props => {
-    const [owner, setOwner] = useState({name: "", contact: ""});
+  const [owner, setOwner] = useState({ name: "", contact: "" });
+  const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        OwnerManager.get(props.ownerId)
-        .then(owner => {
-            setOwner({
-                name: owner.name,
-                phoneNumber: owner.phoneNumber
-            });
-        });
-    }, [props.ownerId]);
+  const handleDelete = () => {
+      setIsLoading(true);
+      OwnerManager.delete(props.ownerId).then(() =>
+      props.history.push("/owner")
+      );
+  };
 
-    return (
-        <div className="card">
-            <div className="card-content">
-    <h3>Name: <span style={{color: 'darkslategrey' }}>{owner.name}</span></h3>
-    <h3>Contact: <span style={{color: 'darkslategrey' }}>{owner.phoneNumber}</span></h3>
-            </div>
-        </div>
-    )
+  useEffect(() => {
+    OwnerManager.get(props.ownerId).then(owner => {
+      setOwner({
+        name: owner.name,
+        phoneNumber: owner.phoneNumber
+      });
+      setIsLoading(false);
+    });
+  }, [props.ownerId]);
 
-}
-export default OwnerDetail
+  return (
+    <div className="card">
+      <div className="card-content">
+        <h3>
+          Name: <span style={{ color: "darkslategrey" }}>{owner.name}</span>
+        </h3>
+        <h3>
+          Contact:{" "}
+          <span style={{ color: "darkslategrey" }}>{owner.phoneNumber}</span>
+        </h3>
+        <button type="button" disabled={isLoading} onClick={handleDelete}>
+            Terminate
+        </button>
+      </div>
+    </div>
+  );
+};
+export default OwnerDetail;
