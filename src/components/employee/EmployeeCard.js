@@ -1,5 +1,5 @@
 import React from "react";
-import CSS from "../animal/Animal.css"
+import "../animal/Animal.css"
 
 const EmployeeCard = props => {
     return (

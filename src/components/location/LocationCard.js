@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 const LocationCard = props => {
     return (
@@ -13,6 +14,9 @@ const LocationCard = props => {
         <h2>
             State: {props.location.state}
         </h2>
+        <Link to={`/location/${props.location.id}`}>
+    <button>Details</button>
+</Link>
         <button type="button" onClick={() => props.deleteLocation(props.location.id)}>Close Location</button>
         </div>
         </div>
