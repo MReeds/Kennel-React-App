@@ -2,12 +2,13 @@ import { Route } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
 import AnimalList from "./animal/AnimalList";
-//only include these once they are built - previous practice exercise
 import LocationList from "./location/LocationList";
 import EmployeeList from "./employee/EmployeeList";
 import OwnerList from "./owner/OwnerList";
 import AnimalDetail from "./animal/AnimalDetail";
 import LocationDetail from "./location/LocationDetail";
+import EmployeeDetail from "./employee/EmployeeDetails";
+import OwnerDetail from "./owner/OwnerDetails";
 
 const ApplicationViews = () => {
   return (
@@ -36,20 +37,20 @@ const ApplicationViews = () => {
           // Pass the animalId to the AnimalDetailComponent
           return <LocationDetail locationId={parseInt(props.match.params.locationId)}/>
       }}/>
-      <Route
-        exact
-        path="/employee"
-        render={props => {
-          return <EmployeeList />;
-        }}
-      />
-      <Route
-        exact
-        path="/owner"
-        render={props => {
-          return <OwnerList />;
-        }}
-      />
+      <Route exact path="/employee" render={(props) => {
+          return <EmployeeList />
+        }} />
+        <Route path="/employee/:employeeId(\d+)" render={(props) => {
+          // Pass the animalId to the AnimalDetailComponent
+          return <EmployeeDetail employeeId={parseInt(props.match.params.employeeId)}/>
+        }} />
+      <Route exact path="/owner" render={(props) => {
+          return <OwnerList />
+        }} />
+        <Route path="/owner/:ownerId(\d+)" render={(props) => {
+          // Pass the animalId to the AnimalDetailComponent
+          return <OwnerDetail ownerId={parseInt(props.match.params.ownerId)}/>
+        }} />
     </React.Fragment>
   );
 };
