@@ -1,5 +1,5 @@
 import React from "react";
-import AnimalCSS from "./Animal.css"
+import "./Animal.css"
 
 const AnimalCard = props => {
   return (
