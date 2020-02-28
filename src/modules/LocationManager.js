@@ -9,6 +9,15 @@ export default {
         return fetch(`${remoteUrl}/locations`)
         .then(result => result.json())
     },
+    update(editedLocation) {    
+        return fetch(`${remoteUrl}/locations/${editedLocation.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(editedLocation)
+        }).then(data => data.json())
+    },
     delete(id) {
         return fetch(`${remoteUrl}/locations/${id}`, {
             method: "DELETE"
