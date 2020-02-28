@@ -6,14 +6,19 @@
       "breed": "Poodle"
     },
     {
-      "id": 2,
-      "name": "Lucy",
-      "breed": "German Shepherd"
+      "id": 3,
+      "name": "Echo",
+      "breed": "Maincoon"
     },
     {
-      "name": "Echo",
-      "breed": "Maincoon",
-      "id": 3
+      "name": "Mally",
+      "breed": "Llamma",
+      "id": 4
+    },
+    {
+      "name": "Hush",
+      "breed": "Husky",
+      "id": 5
     }
   ],
   "employees": [
@@ -24,15 +29,21 @@
       "department": "Marketing"
     },
     {
-      "id": 3,
-      "firstName": "Kelly",
-      "lastName": "Jenkins",
-      "department": "Medical"
-    },
-    {
       "firstName": "John",
       "lastName": "Jacobs",
+      "department": "Sales",
+      "id": 2
+    },
+    {
+      "firstName": "Samantha",
+      "lastName": "Henson",
       "department": "Marketing",
+      "id": 3
+    },
+    {
+      "firstName": "Samuel",
+      "lastName": "Likens",
+      "department": "I.T.",
       "id": 4
     }
   ],
@@ -54,6 +65,12 @@
       "city": "Westbrook",
       "state": "Maine",
       "id": 4
+    },
+    {
+      "address": "993 SpindleWood",
+      "city": "Johnstown",
+      "state": "West Virginia",
+      "id": 5
     }
   ],
   "owners": [
@@ -63,14 +80,19 @@
       "phoneNumber": "615-776-5555"
     },
     {
-      "id": 2,
-      "name": "Alexander Woods",
-      "phoneNumber": "615-456-5555"
+      "id": 3,
+      "name": "John Bellion",
+      "phoneNumber": "543-792-4888"
     },
     {
-      "name": "John Bellion",
-      "phoneNumber": "543-792-4888",
-      "id": 3
+      "name": "Josh Fredrickson",
+      "phoneNumber": "554-998-3423",
+      "id": 4
+    },
+    {
+      "name": "Jacob Westbrook",
+      "phoneNumber": "334-556-7890",
+      "id": 5
     }
   ]
 }

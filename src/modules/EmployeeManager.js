@@ -7,6 +7,15 @@ export default {
   getAll() {
     return fetch(`${remoteUrl}/employees`).then(results => results.json());
   },
+  update(editedEmployee) {
+    return fetch(`${remoteUrl}/employees/${editedEmployee.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedEmployee)
+    }).then(data => data.json());
+  },
   delete(id) {
     return fetch(`${remoteUrl}/employees/${id}`, {
       method: "DELETE"
@@ -22,3 +31,4 @@ export default {
     }).then(data => data.json());
   }
 };
+

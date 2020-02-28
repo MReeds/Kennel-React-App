@@ -3,17 +3,21 @@ import React from "react";
 import Home from "./home/Home";
 import Login from "./auth/Login";
 import AnimalList from "./animal/AnimalList";
+import AnimalEditForm from "./animal/AnimalEditForm";
 import AnimalDetail from "./animal/AnimalDetail";
 import AnimalForm from "./animal/AnimalForm";
 import LocationList from "./location/LocationList";
+import LocationEditForm from "./location/LocationEditForm";
 import LocationDetail from "./location/LocationDetail";
 import LocationForm from "./location/LocationForm";
 import EmployeeList from "./employee/EmployeeList";
 import EmployeeDetail from "./employee/EmployeeDetails";
+import EmployeeEditForm from "./employee/EmployeeEditForm";
 import EmployeeForm from "./employee/EmployeeForm";
 import OwnerList from "./owner/OwnerList";
 import OwnerDetail from "./owner/OwnerDetails";
 import OwnerForm from "./owner/OwnerForm";
+import OwnerEditForm from "./owner/OwnerEditForm";
 
 // refactor and organize imports to be with similar topic
 const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
@@ -40,6 +44,16 @@ const ApplicationViews = () => {
         }}
       />
       <Route
+        path="/animals/:animalId(\d+)/edit"
+        render={props => {
+          if (isAuthenticated()) {
+            return <AnimalEditForm {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
+      <Route
         path="/animals/new"
         render={props => {
           if (isAuthenticated()) {
@@ -50,9 +64,10 @@ const ApplicationViews = () => {
         }}
       />
       <Route
-        path="/animals/:animalId(\d+)"
+        exact path="/animals/:animalId(\d+)"
         render={props => {
           // Pass the animalId to the AnimalDetailComponent
+          // refactor conditional to show alert when user searches for an animal that is no longer in database
           if (isAuthenticated()) {
             return (
               <AnimalDetail
@@ -76,6 +91,16 @@ const ApplicationViews = () => {
         }}
       />
       <Route
+        path="/location/:locationId(\d+)/edit"
+        render={props => {
+          if (isAuthenticated()) {
+            return <LocationEditForm {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
+      <Route
         exact
         path="/location"
         render={props => {
@@ -87,7 +112,7 @@ const ApplicationViews = () => {
         }}
       />
       <Route
-        path="/location/:locationId(\d+)"
+        exact path="/location/:locationId(\d+)"
         render={props => {
           if (isAuthenticated()) {
             return (
@@ -113,6 +138,16 @@ const ApplicationViews = () => {
         }}
       />
       <Route
+        path="/employee/:employeeId(\d+)/edit"
+        render={props => {
+          if (isAuthenticated()) {
+            return <EmployeeEditForm {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
+      <Route
         path="/employee/new"
         render={props => {
           if (isAuthenticated()) {
@@ -123,7 +158,7 @@ const ApplicationViews = () => {
         }}
       />
       <Route
-        path="/employee/:employeeId(\d+)"
+        exact path="/employee/:employeeId(\d+)"
         render={props => {
           if (isAuthenticated()) {
             return (
@@ -148,6 +183,16 @@ const ApplicationViews = () => {
         }}
       />
       <Route
+        path="/owner/:ownerId(\d+)/edit"
+        render={props => {
+          if (isAuthenticated()) {
+            return <OwnerEditForm {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
+      <Route
         exact
         path="/owner"
         render={props => {
@@ -159,7 +204,7 @@ const ApplicationViews = () => {
         }}
       />
       <Route
-        path="/owner/:ownerId(\d+)"
+        exact path="/owner/:ownerId(\d+)"
         render={props => {
           if (isAuthenticated()) {
             return (
