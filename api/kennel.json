@@ -35,10 +35,10 @@
       "id": 2
     },
     {
+      "id": 3,
       "firstName": "Samantha",
       "lastName": "Henson",
-      "department": "Marketing",
-      "id": 3
+      "department": "Marketing"
     },
     {
       "firstName": "Samuel",
@@ -90,9 +90,9 @@
       "id": 4
     },
     {
+      "id": 5,
       "name": "Jacob Westbrook",
-      "phoneNumber": "334-556-7890",
-      "id": 5
+      "phoneNumber": "334-556-7890"
     }
   ]
 }
