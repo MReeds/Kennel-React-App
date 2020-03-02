@@ -7,6 +7,10 @@ export default {
   getAll() {
     return fetch(`${remoteUrl}/employees`).then(results => results.json());
   },
+  getWithAnimals(id) {
+    return fetch(`${remoteUrl}/employees/${id}?_embed=animals`)
+            .then(result => result.json())
+},
   update(editedEmployee) {
     return fetch(`${remoteUrl}/employees/${editedEmployee.id}`, {
       method: "PUT",

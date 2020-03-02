@@ -48,7 +48,7 @@ const LocationEditForm = props => {
                   id="address"
                   value={location.address}
                 />
-                <label htmlFor="address">Location Address</label>
+                <label htmlFor="address">Address</label>
     
                 <input
                   type="text"

@@ -13,6 +13,8 @@ const EmployeeCard = props => {
         <Link to={`/employee/${props.employee.id}`}>
           <button>Details</button>
         </Link>
+        <button type="button"
+        onClick={() => { props.history.push(`/employee/${props.employee.id}/details`) }}>Animal Details</button>
         <button
           type="button"
           onClick={() =>

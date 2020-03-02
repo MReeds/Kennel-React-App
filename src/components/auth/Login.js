@@ -12,12 +12,7 @@ const Login = props => {
 
   const handleLogin = e => {
     e.preventDefault();
-    /*
-        For now, just store the email and password that
-        the customer enters into session storage.
-        ...Let's just trust the user... That's a good idea, right????
-    */
-    sessionStorage.setItem("credentials", JSON.stringify(credentials));
+    props.setUser(credentials);
     props.history.push("/");
   };
 

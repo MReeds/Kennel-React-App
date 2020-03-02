@@ -1,24 +1,28 @@
 {
   "animals": [
     {
-      "id": 1,
+      "id": 2,
       "name": "Doodles",
-      "breed": "Poodle"
+      "breed": "German Sheperd",
+      "employeeId": 1
     },
     {
       "id": 3,
-      "name": "Echo",
-      "breed": "Maincoon"
+      "name": "Esme",
+      "breed": "Pitbull",
+      "employeeId": 3
     },
     {
-      "name": "Mally",
-      "breed": "Llamma",
-      "id": 4
+      "id": 4,
+      "name": "Jack",
+      "breed": "Big cat",
+      "employeeId": 4
     },
     {
-      "name": "Hush",
-      "breed": "Husky",
-      "id": 5
+      "name": "Angus",
+      "breed": "Gerbil",
+      "id": 5,
+      "employeeId": 2
     }
   ],
   "employees": [
@@ -65,12 +69,6 @@
       "city": "Westbrook",
       "state": "Maine",
       "id": 4
-    },
-    {
-      "address": "993 SpindleWood",
-      "city": "Johnstown",
-      "state": "West Virginia",
-      "id": 5
     }
   ],
   "owners": [
@@ -78,16 +76,6 @@
       "id": 1,
       "name": "Greg Jones",
       "phoneNumber": "615-776-5555"
-    },
-    {
-      "id": 3,
-      "name": "John Bellion",
-      "phoneNumber": "543-792-4888"
-    },
-    {
-      "name": "Josh Fredrickson",
-      "phoneNumber": "554-998-3423",
-      "id": 4
     },
     {
       "id": 5,

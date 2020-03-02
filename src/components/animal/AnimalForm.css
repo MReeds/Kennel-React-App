@@ -58,4 +58,5 @@ fieldset input, fieldset button, fieldset select {
 
 fieldset .alignRight {
     text-align: right;
+    padding: 10px;
 }
