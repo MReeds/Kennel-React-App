@@ -18,7 +18,7 @@ const EmployeeForm = props => {
             window.alert("Please input employee name and department");
         } else {
             setIsLoading(true);
-            EmployeeManager.post(employee).then(() => props.history.push("/employee"));
+            EmployeeManager.post(employee).then(() => props.history.push("/employees"));
         }
     };
 

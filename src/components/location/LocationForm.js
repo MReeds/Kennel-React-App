@@ -18,7 +18,7 @@ const LocationForm = props => {
             window.alert("Please input location address, city and state.");
         } else {
             setIsLoading(true);
-            LocationManager.post(location).then(() => props.history.push("/location"));
+            LocationManager.post(location).then(() => props.history.push("/locations"));
         }
     };
 

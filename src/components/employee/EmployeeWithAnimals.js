@@ -1,19 +1,24 @@
-import React, { useState, useEffect } from 'react'
-import EmployeeManager from '../../modules/EmployeeManager'
-import AnimalCard from '../animal/AnimalCard'
+import React, { useState, useEffect } from 'react';
+import EmployeeManager from '../../modules/EmployeeManager';
+import AnimalCard from '../animal/AnimalCard';
+import AnimalManager from "../../modules/AnimalManager";
 
 const EmployeeWithAnimals = props => {
   const [employee, setEmployee] = useState({});
   const [animals, setAnimals] = useState([]);
 
   useEffect(() => {
-    //got here now make call to get employee with animal
     EmployeeManager.getWithAnimals(props.match.params.employeeId)
       .then(APIResult => {
         setEmployee(APIResult);
         setAnimals(APIResult.animals);
       });
   }, []);
+
+  const deleteAnimal = id => {
+    AnimalManager.delete(id)
+      .then(() => AnimalManager.getAll().then(setAnimals));
+  };
 
   return (
     <div className="card">
@@ -22,6 +27,7 @@ const EmployeeWithAnimals = props => {
         <AnimalCard
           key={animal.id}
           animal={animal}
+          deleteAnimal={deleteAnimal}
           {...props}
         />
       )}

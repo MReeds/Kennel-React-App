@@ -15,10 +15,11 @@ const Home = () => {
 
   return (
     <>
-      <address>
+      <address><h1>
         Visit Us at the Nashville North Location
         <br />
         500 Puppy Way
+        </h1>
       </address>
       <h1>Animal Spotlight</h1>
       <button onClick={refreshSpotlightAnimal}>Reload &#x27f3;</button>
