@@ -5,6 +5,10 @@ export default {
         return fetch(`${remoteUrl}/locations/${id}`)
         .then(result => result.json())
     },
+    getWithEmployees(id) {
+        return fetch(`${remoteUrl}/locations/${id}?_embed=employees`)
+                .then(result => result.json())
+    },
     getAll() {
         return fetch(`${remoteUrl}/locations`)
         .then(result => result.json())

@@ -65,13 +65,12 @@ const AnimalEditForm = props => {
               value={animal.breed}
             />
             <label htmlFor="breed">Breed</label>
-          </div>
           <select
             className="form-control"
             id="employeeId"
             value={animal.employeeId}
             onChange={handleFieldChange}
-          >
+            >
             {employees.map(employee => (
               <option key={employee.id} value={employee.id}>
                 {employee.firstName} {employee.lastName}
@@ -79,6 +78,7 @@ const AnimalEditForm = props => {
             ))}
           </select>
           <label htmlFor="employeeId">Employee</label>
+            </div>
           <div className="alignRight">
             <button
               type="button"

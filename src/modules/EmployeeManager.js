@@ -11,6 +11,10 @@ export default {
     return fetch(`${remoteUrl}/employees/${id}?_embed=animals`)
             .then(result => result.json())
 },
+postWithAnimals(id) {
+  return fetch(`${remoteUrl}/employees/${id}?_embed=animals`)
+  .then(data => data.json())
+},
   update(editedEmployee) {
     return fetch(`${remoteUrl}/employees/${editedEmployee.id}`, {
       method: "PUT",

@@ -24,7 +24,7 @@ const LocationEditForm = props => {
         };
 
         LocationManager.update(editedLocation)
-        .then(() => props.history.push("/location"))
+        .then(() => props.history.push("/locations"))
     }
 
     useEffect(() => {

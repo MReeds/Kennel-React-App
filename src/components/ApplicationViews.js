@@ -10,6 +10,7 @@ import LocationList from "./location/LocationList";
 import LocationEditForm from "./location/LocationEditForm";
 import LocationDetail from "./location/LocationDetail";
 import LocationForm from "./location/LocationForm";
+// import LocationWithEmployees from "./location/LocationWithEmployees";
 import EmployeeList from "./employee/EmployeeList";
 import EmployeeDetail from "./employee/EmployeeDetails";
 import EmployeeEditForm from "./employee/EmployeeEditForm";
@@ -48,7 +49,7 @@ const ApplicationViews = props => {
             return <Redirect to="/login" />;
           }
         }}
-        />
+      />
       <Route
         path="/animals/:animalId(\d+)/edit"
         render={props => {
@@ -58,7 +59,7 @@ const ApplicationViews = props => {
             return <Redirect to="/login" />;
           }
         }}
-        />
+      />
       <Route
         path="/animals/new"
         render={props => {
@@ -68,7 +69,7 @@ const ApplicationViews = props => {
             return <Redirect to="/login" />;
           }
         }}
-        />
+      />
       <Route
         exact
         path="/animals/:animalId(\d+)"
@@ -81,12 +82,12 @@ const ApplicationViews = props => {
                 animalId={parseInt(props.match.params.animalId)}
                 {...props}
               />
-              );
-            } else {
-              return <Redirect to="/login" />;
-            }
-          }}
-          />
+            );
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
       <Route
         path="/location/new"
         render={props => {
@@ -96,7 +97,7 @@ const ApplicationViews = props => {
             return <Redirect to="/login" />;
           }
         }}
-        />
+      />
       <Route
         path="/location/:locationId(\d+)/edit"
         render={props => {
@@ -106,22 +107,17 @@ const ApplicationViews = props => {
             return <Redirect to="/login" />;
           }
         }}
-        />
+      />
       <Route
         exact
         path="/locations"
         render={props => {
-          if (hasUser) {
-            console.log(hasUser)
-            return <LocationList {...props} />;
-          } else {
-            return <Redirect to="/login" />;
-          }
+          return <LocationList {...props} />;
         }}
-        />
+      />
       <Route
         exact
-        path="/location/:locationId(\d+)"
+        path="/locations/:locationId(\d+)"
         render={props => {
           if (hasUser) {
             return (
@@ -135,6 +131,12 @@ const ApplicationViews = props => {
           }
         }}
       />
+      {/* <Route
+        path="/locations/:locationId(\d+)/details"
+        render={props => {
+          return <LocationWithEmployees {...props} />;
+        }}
+      /> */}
       <Route
         exact
         path="/employees"

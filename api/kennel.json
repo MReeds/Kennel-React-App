@@ -1,74 +1,39 @@
 {
-  "animals": [
-    {
-      "id": 2,
-      "name": "Doodles",
-      "breed": "German Sheperd",
-      "employeeId": 1
-    },
-    {
-      "id": 3,
-      "name": "Esme",
-      "breed": "Pitbull",
-      "employeeId": 3
-    },
-    {
-      "id": 4,
-      "name": "Jack",
-      "breed": "Big cat",
-      "employeeId": 4
-    },
-    {
-      "name": "Angus",
-      "breed": "Gerbil",
-      "id": 5,
-      "employeeId": 2
-    }
-  ],
+  "animals": [],
   "employees": [
     {
-      "id": 1,
-      "firstName": "George",
-      "lastName": "Smith",
-      "department": "Marketing"
-    },
-    {
-      "firstName": "John",
-      "lastName": "Jacobs",
+      "firstName": "Mark",
+      "lastName": "Myers",
       "department": "Sales",
-      "id": 2
+      "id": 2,
+      "locationId": 4
     },
     {
-      "id": 3,
       "firstName": "Samantha",
-      "lastName": "Henson",
-      "department": "Marketing"
-    },
-    {
-      "firstName": "Samuel",
       "lastName": "Likens",
-      "department": "I.T.",
-      "id": 4
+      "department": "Marketing",
+      "id": 3,
+      "locationId": 5
     }
   ],
   "locations": [
-    {
-      "id": 1,
-      "address": "124 Westwood Drive",
-      "city": "Portland",
-      "state": "Tennessee"
-    },
-    {
-      "id": 3,
-      "address": "3004 Grayland Avenue",
-      "city": "Cabool",
-      "state": "Missouri"
-    },
     {
       "address": "772 Windyway",
       "city": "Westbrook",
       "state": "Maine",
       "id": 4
+    },
+    {
+      "address": "223 slipperslope",
+      "city": "Freshwater",
+      "state": "Tennessee",
+      "id": 5
+    },
+    {
+      "address": "192 GooglyMoogly",
+      "city": "Suppository",
+      "state": "New York",
+      "id": 6
     }
   ],
   "owners": [
