@@ -10,7 +10,7 @@ import LocationList from "./location/LocationList";
 import LocationEditForm from "./location/LocationEditForm";
 import LocationDetail from "./location/LocationDetail";
 import LocationForm from "./location/LocationForm";
-// import LocationWithEmployees from "./location/LocationWithEmployees";
+import LocationWithEmployees from "./location/LocationWithEmployees";
 import EmployeeList from "./employee/EmployeeList";
 import EmployeeDetail from "./employee/EmployeeDetails";
 import EmployeeEditForm from "./employee/EmployeeEditForm";
@@ -117,7 +117,7 @@ const ApplicationViews = props => {
       />
       <Route
         exact
-        path="/locations/:locationId(\d+)"
+        path="/location/:locationId(\d+)"
         render={props => {
           if (hasUser) {
             return (
@@ -131,12 +131,12 @@ const ApplicationViews = props => {
           }
         }}
       />
-      {/* <Route
-        path="/locations/:locationId(\d+)/details"
+      <Route
+        path="/locations/:locationObjectId(\d+)/details"
         render={props => {
           return <LocationWithEmployees {...props} />;
         }}
-      /> */}
+      />
       <Route
         exact
         path="/employees"
