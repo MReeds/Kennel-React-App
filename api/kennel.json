@@ -40,6 +40,20 @@
       "lastName": "Kent",
       "department": "Hero",
       "locationId": 6
+    },
+    {
+      "id": 4,
+      "firstName": "Martha",
+      "lastName": "Livingston",
+      "department": "Accounting",
+      "locationId": 6
+    },
+    {
+      "id": 5,
+      "firstName": "Bob",
+      "lastName": "Whatever",
+      "department": "sales",
+      "locationId": 7
     }
   ],
   "locations": [
@@ -63,10 +77,10 @@
       "id": 6
     },
     {
+      "id": 7,
       "address": "test place",
       "city": "test",
-      "state": "test",
-      "id": 7
+      "state": "test"
     }
   ],
   "owners": [

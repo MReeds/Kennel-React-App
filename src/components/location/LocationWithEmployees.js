@@ -4,13 +4,13 @@ import EmployeeCard from "../employee/EmployeeCard";
 import EmployeeManager from "../../modules/EmployeeManager";
 
 const LocationsWithEmployees = props => {
-    const [locaTion, setLocaTion] = useState({});
+    const [locationObject, setLocationObject] = useState({});
     const [employees, setEmployees] = useState([]);
 
     useEffect(() => {
-        LocationManager.getWithEmployees(props.match.params.locaTionId)
+        LocationManager.getWithEmployees(props.match.params.locationObjectId)
         .then(APIResult => {
-            setLocaTion(APIResult);
+            setLocationObject(APIResult);
             setEmployees(APIResult.employees);
         });
     }, []);
@@ -22,7 +22,7 @@ const LocationsWithEmployees = props => {
 
     return (
         <div className="card">
-            <h2>Location: {locaTion.address} {locaTion.city}, {locaTion.state}</h2>
+            <h2>Location: {locationObject.address} {locationObject.city}, {locationObject.state}</h2>
             {employees.map(employee =>
                 <EmployeeCard
                 key={employee.id}

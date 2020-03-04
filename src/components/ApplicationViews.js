@@ -132,7 +132,7 @@ const ApplicationViews = props => {
         }}
       />
       <Route
-        path="/locations/:locaTionId(\d+)/details"
+        path="/locations/:locationObjectId(\d+)/details"
         render={props => {
           return <LocationWithEmployees {...props} />;
         }}

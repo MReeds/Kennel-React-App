@@ -9,7 +9,7 @@ const EmployeeEditForm = props => {
     lastName: "",
     department: ""
   });
-  const [locaTions, setLocaTion] = useState([]);
+  const [locations, setLocation] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFieldChange = evt => {
@@ -27,7 +27,7 @@ const EmployeeEditForm = props => {
       firstName: employee.firstName,
       lastName: employee.lastName,
       department: employee.department,
-      locaTionId: parseInt(employee.locaTionId)
+      locationId: parseInt(employee.locationObjectId)
     };
 
     EmployeeManager.update(editedEmployee).then(() =>
@@ -37,8 +37,8 @@ const EmployeeEditForm = props => {
 
   useEffect(() => {
     EmployeeManager.get(props.match.params.employeeId).then(employee => {
-      LocationManager.getAll().then(locaTions => {
-        setLocaTion(locaTions);
+      LocationManager.getAll().then(locations => {
+        setLocation(locations);
         setEmployee(employee);
         setIsLoading(false);
       });
@@ -80,13 +80,13 @@ const EmployeeEditForm = props => {
             <label htmlFor="department">Department</label>
             <select
               className="form-control"
-              id="locaTionId"
-              value={employee.locaTionId}
+              id="locationObjectId"
+              value={employee.locationObjectId}
               onChange={handleFieldChange}
             >
-              {locaTions.map(locaTion => (
-                <option key={locaTion.id} value={locaTion.id}>
-                  {locaTion.address} {locaTion.city} {locaTion.state}
+              {locations.map(location => (
+                <option key={location.id} value={location.id}>
+                  {location.address} {location.city} {location.state}
                 </option>
               ))}
             </select>
