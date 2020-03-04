@@ -46,13 +46,6 @@
       "firstName": "Martha",
       "lastName": "Livingston",
       "department": "Accounting",
-      "locationId": 6
-    },
-    {
-      "id": 5,
-      "firstName": "Bob",
-      "lastName": "Whatever",
-      "department": "sales",
       "locationId": 7
     }
   ],
